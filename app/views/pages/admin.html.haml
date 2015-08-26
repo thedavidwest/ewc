@@ -1,0 +1,7 @@
+.admin-wrapper
+  - if user_signed_in?
+    = link_to "Add New Wearable", new_wearable_path, :class => "main-btn"
+  - else
+    .admin-content
+      %h1 Admin Login
+      = link_to "Sign In", new_user_session_path, :class => "main-btn"

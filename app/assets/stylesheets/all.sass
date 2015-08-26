@@ -1,0 +1,266 @@
+// General
+html
+  height: 100%
+  box-sizing: border-box
+body
+  background: $white
+  position: relative
+  min-height: 100%
+  padding-bottom: 58px
+
+.alert
+  width: 100%
+  text-align: center
+  background: transparentize($turquoise, .3)
+  color: $white
+  font:
+    weight: 700
+    size: 24px
+  z-index: 999
+  position: absolute
+  top: 0
+  padding: 17px 0
+
+// Header/Navbar
+header
+  background: $white
+  width: 100%
+  position: fixed
+  border-bottom: 5px solid $turquoise
+  z-index: 100
+  .navbar
+    padding: 20px 0
+    @media(max-width: 770px)
+      padding-bottom: 0
+
+    .nav-logo
+      padding-left: 20px
+      font:
+        weight: 700
+      display: inline-block
+      color: $black
+      +black-link
+      @media(max-width: 770px)
+        display: block
+        padding: 0 0 20px 10px
+        font-size: 20px
+
+    nav
+      float: right
+      @media(max-width: 770px)
+        float: initial
+        text-align: initial
+        display: none
+      li
+        display: inline-block
+        padding: 0 20px
+        font:
+          weight: 700
+        @media(max-width: 770px)
+          display: block
+          text-align: center
+          padding: 10px
+          border-top: 1px solid $turquoise
+          &:last-child
+            border-bottom: 1px solid $turquoise
+          &:first-child
+            border-top: 5px solid $turquoise
+        a
+          +turquoise-link
+
+    .nav-toggle
+      display: none
+      @media(max-width: 770px)
+        display: block
+        float: right
+
+// Homepage - Main Section
+section.main
+  +outer-container(100%)
+  text-align: center
+  margin: 0 auto
+  height: 100vh
+  background:
+    color: transparentize($turquoise, .5)
+    size: cover
+    position: center
+  border-bottom: 5px solid $turquoise
+  .main-content
+    +vertical-align
+    .main-logo
+      padding: 69px 0 20px 0
+      img
+        +size(150px)
+
+    h1
+      color: $white
+      font-size: 30px
+
+    .main-btn
+      +main-btn
+
+// Homepage - About Section
+section.about
+  width: 100%
+  background:
+    image: url('header-img.jpg')
+    size: cover
+    position: center
+  height: 800px
+  .overlay
+    height: 100%
+    width: 100%
+    background:
+      color: transparentize($black, .3)
+
+    .about-content
+      +vertical-align
+      +outer-container(75%)
+      font-family: 'Reenie Beanie', cursive
+      color: $white
+      font-size: 30px
+      @media(max-width: 770px)
+        font-size: 24px
+      p
+        padding: 40px 0 20px 0
+        margin-bottom: 0
+
+      h3
+        font:
+          family: 'Reenie Beanie', cursive
+          size: 44px
+          weight: 400
+        text-align: right
+        line-height: 1
+        padding: 0 50px 0 0
+        margin: 0
+
+// Wearable Page
+.wearable-wrapper
+  +outer-container(100%)
+  padding-top: 69px
+  text-align: center
+  background:
+    image: url('wearable.jpg')
+    size: cover
+    position: center center
+  height: 92vh
+
+  .overlay
+    height: 100%
+    width: 100%
+    background:
+      color: transparentize($white, .2)
+    h1
+      padding-top: 40px
+      font:
+        size: 34px
+
+// Functional Page
+.functional-wrapper
+  +outer-container(100%)
+  padding-top: 69px
+  text-align: center
+  background:
+    image: url('header-img.jpg')
+    size: cover
+    position: bottom
+  height: 92vh
+
+  .overlay
+    height: 100%
+    width: 100%
+    background:
+      color: transparentize($white, .1)
+    h1
+      padding-top: 40px
+      font:
+        size: 34px
+
+// Stockists Page
+.stock-wrapper
+  +outer-container(100%)
+  padding-top: 69px
+  text-align: center
+  background:
+    image: url('header-img.jpg')
+    size: cover
+    position: bottom
+  height: 92vh
+
+  .overlay
+    height: 100%
+    width: 100%
+    background:
+      color: transparentize($white, .1)
+    h1
+      padding-top: 40px
+      font:
+        size: 34px
+    a
+      +black-link
+      font:
+        size: 28px
+        weight: 400
+        family: 'Reenie Beanie', cursive
+    img
+      +size(100px)
+      border-radius: 50px
+    .col
+      +span-columns(6)
+      @media(max-width: 770px)
+        +span-columns(12)
+
+// Contact Page
+.contact-wrapper
+  padding-top: 69px
+  text-align: center
+  h1
+    padding-top: 40px
+    font:
+      size: 30px
+      family: 'Reenie Beanie', cursive
+      weight: 400
+    color: $turquoise
+  h2
+    font-size: 34px
+    //padding-bottom: 20px
+
+  p
+    padding: 40px 0 20px 0
+    font:
+      size: 24px
+      family: 'Reenie Beanie', cursive
+      weight: 400
+    a
+      +turquoise-link
+
+  form
+    +outer-container(50%)
+    h1
+      padding: 0 0 10px 0
+      font-family: $helvetica
+      font-size: 16px
+      margin: 0
+      text-align: left
+    input[type=text]
+      min-height: 100px
+    .main-btn
+      +main-btn
+
+// Footer
+footer
+  background: $turquoise
+  color: $white
+  //border-top: 5px solid $turquoise
+  text-align: center
+  padding: 20px 0
+  font-weight: 700
+  width: 100%
+  position: absolute
+  bottom: 0
+  right: 0
+  left: 0
+  p
+    margin: 0
+    font-size: 12px

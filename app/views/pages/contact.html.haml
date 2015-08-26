@@ -1,0 +1,16 @@
+.contact-wrapper
+  %h1 Interested in a custom order?
+  %h2 Contact Me
+  %form
+    %h1 Email:
+    %input{:email => "email", :type => "email"}/
+    %br/
+    %h1 Comment:
+    %input{:text => "comment", :type => "text"}/
+    %br/
+    %br/
+    %input{:type => "submit", :value => "Submit", :class => "main-btn"}/
+  %p
+    For all other orders, please visit my
+    = succeed " page." do
+      %a{:href => "https://www.etsy.com/shop/ErinWestCeramics", :target => "_blank"} Etsy

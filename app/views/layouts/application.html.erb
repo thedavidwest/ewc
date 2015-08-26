@@ -5,11 +5,24 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Dancing+Script|Reenie+Beanie' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
-<%= yield %>
-
+  <% flash.each do |name, msg| %>
+    <%= content_tag(:div, msg, class: "alert")%>
+  <% end %>
+  <%= render 'layouts/header' %>
+  <%= yield %>
+  <%= render 'layouts/footer' %>
+<script>
+$(document).ready(function(){
+  setTimeout(function(){
+    $('.alert').fadeOut("slow", function(){
+      $this.remove();
+    })
+  }, 2500);
+});
+</script>
 </body>
 </html>

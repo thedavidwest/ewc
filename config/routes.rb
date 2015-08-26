@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :wearables
+  devise_for :users
+  root 'pages#home'
+
+  get 'wear' => 'pages#wear'
+  get 'functional' => 'pages#functional'
+  get 'stockists' => 'pages#stockists'
+  get 'contact' => 'pages#contact'
+  get 'admin' => 'pages#admin', as: :user_root
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

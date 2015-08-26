@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
   end
-  def wear
+  def wearable
   end
   def functional
   end

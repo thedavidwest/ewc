@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  resources :wearables
   devise_for :users
   root 'pages#home'
 
-  get 'wear' => 'pages#wear'
+  get 'wearable' => 'pages#wearable'
   get 'functional' => 'pages#functional'
   get 'stockists' => 'pages#stockists'
   get 'contact' => 'pages#contact'

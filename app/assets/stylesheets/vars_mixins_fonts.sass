@@ -1,6 +1,6 @@
 // Colors
 
-$turquoise: #1abc9c
+$black: #1abc9c
 $dark-turquoise: #16a085
 $greyblue: #34495e
 $dark-greyblue: #2c3e50
@@ -46,29 +46,36 @@ $dark-blue: #2980b9
     color: $dark-red
 
 =turquoise-link
-  color: $turquoise
+  color: $black
   transition: .3s ease-in-out
   &:hover
-    color: darken($turquoise, 25%)
+    color: lighten($black, 25%)
+
+=turquoise-link2
+  color: $black
+  transition: .3s ease-in-out
+  font-weight: 700
+  &:hover
+    color: lighten($black, 25%)
 
 =white-link
   color: $white
   transition: .3s ease-in-out
   &:hover
-    color: darken($turquoise, 25%)
+    color: darken($black, 25%)
 
 =black-link
   color: $black
   transition: .3s ease-in-out
   &:hover
-    color: $turquoise
+    color: $black
 
 =main-btn
   font-weight: 700
   padding: 10px 20px
   border-radius: 0
   margin: 0 10px
-  background: $turquoise
+  background: $black
   +white-link
   &:hover
-    background: transparentize($turquoise, .5)
+    background: transparentize($black, .5)

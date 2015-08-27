@@ -1,0 +1,7 @@
+= simple_form_for @post do |f|
+  = f.input :image
+  = f.input :title
+  = f.input :description
+  = f.select :category, [ 'Wearable', 'Functional' ], :prompt => 'Select One'
+
+  = f.button :submit

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  get 'users/sign_up' => redirect('/404.html')
   devise_for :users
+  resources :posts
   root 'pages#home'
 
   get 'wearable' => 'pages#wearable'
@@ -7,6 +9,8 @@ Rails.application.routes.draw do
   get 'stockists' => 'pages#stockists'
   get 'contact' => 'pages#contact'
   get 'admin' => 'pages#admin', as: :user_root
+  get 'wall' => 'posts#wall'
+  get 'fall' => 'posts#fall'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

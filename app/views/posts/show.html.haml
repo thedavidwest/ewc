@@ -1,0 +1,7 @@
+.posts-wrapper
+  = image_tag @post.image.url(:medium)
+  %h1= @post.title
+  %p= @post.description
+
+  = link_to "Go Back", user_root_path
+  = link_to "New Post", new_post_path

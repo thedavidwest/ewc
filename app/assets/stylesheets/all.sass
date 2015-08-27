@@ -11,7 +11,7 @@ body
 .alert
   width: 100%
   text-align: center
-  background: transparentize($turquoise, .3)
+  background: transparentize($black, .3)
   color: $white
   font:
     weight: 700
@@ -21,13 +21,19 @@ body
   top: 0
   padding: 17px 0
 
+input[type=text], input[type=email], textarea
+  font:
+    family: $helvetica
+    weight: 300
+
 // Header/Navbar
 header
   background: $white
   width: 100%
   position: fixed
-  border-bottom: 5px solid $turquoise
+  border-bottom: 5px solid $black
   z-index: 100
+  font-size: 20px
   .navbar
     padding: 20px 0
     @media(max-width: 770px)
@@ -60,11 +66,11 @@ header
           display: block
           text-align: center
           padding: 10px
-          border-top: 1px solid $turquoise
+          border-top: 1px solid $black
           &:last-child
-            border-bottom: 1px solid $turquoise
+            border-bottom: 1px solid $black
           &:first-child
-            border-top: 5px solid $turquoise
+            border-top: 5px solid $black
         a
           +turquoise-link
 
@@ -81,23 +87,28 @@ section.main
   margin: 0 auto
   height: 100vh
   background:
-    color: transparentize($turquoise, .5)
+    image: url('header-img.jpg')
     size: cover
     position: center
-  border-bottom: 5px solid $turquoise
-  .main-content
-    +vertical-align
-    .main-logo
-      padding: 69px 0 20px 0
-      img
-        +size(150px)
+  border-bottom: 5px solid $black
+  .overlay
+    height: 100%
+    width: 100%
+    background:
+      color: transparentize($black, .7)
+    .main-content
+      +vertical-align
+      .main-logo
+        padding: 69px 0 20px 0
+        img
+          +size(150px)
 
-    h1
-      color: $white
-      font-size: 30px
+      h1
+        color: $white
+        font-size: 30px
 
-    .main-btn
-      +main-btn
+      .main-btn
+        +main-btn
 
 // Homepage - About Section
 section.about
@@ -140,7 +151,7 @@ section.about
   +outer-container(100%)
   padding-top: 69px
   text-align: center
-  background:
+  //background:
     image: url('wearable.jpg')
     size: cover
     position: center center
@@ -161,7 +172,7 @@ section.about
   +outer-container(100%)
   padding-top: 69px
   text-align: center
-  background:
+  //background:
     image: url('header-img.jpg')
     size: cover
     position: bottom
@@ -198,7 +209,7 @@ section.about
       font:
         size: 34px
     a
-      +black-link
+      +turquoise-link2
       font:
         size: 28px
         weight: 400
@@ -221,7 +232,7 @@ section.about
       size: 30px
       family: 'Reenie Beanie', cursive
       weight: 400
-    color: $turquoise
+    color: $black
   h2
     font-size: 34px
     //padding-bottom: 20px
@@ -233,13 +244,13 @@ section.about
       family: 'Reenie Beanie', cursive
       weight: 400
     a
-      +turquoise-link
+      +turquoise-link2
 
   form
     +outer-container(50%)
     h1
       padding: 0 0 10px 0
-      font-family: $helvetica
+      font-family: 'Dancing Script'
       font-size: 16px
       margin: 0
       text-align: left
@@ -250,9 +261,9 @@ section.about
 
 // Footer
 footer
-  background: $turquoise
+  background: $black
   color: $white
-  //border-top: 5px solid $turquoise
+  //border-top: 5px solid $black
   text-align: center
   padding: 20px 0
   font-weight: 700

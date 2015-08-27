@@ -1,0 +1,5 @@
+.posts-wrapper
+  - @posts.each do |post|
+    = image_tag @post.image.url(:thumb)
+    %h1= post.title
+    %p= post.description

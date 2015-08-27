@@ -1,6 +1,9 @@
 .admin-wrapper
   - if user_signed_in?
-    %h1 Hello
+    %ul
+      %li= link_to "Wearable Index", wall_path
+      %li= link_to "Functional Index", fall_path
+    = link_to "Add New", new_post_path, :class => "main-btn"
   - else
     .admin-content
       %h1 Admin Login

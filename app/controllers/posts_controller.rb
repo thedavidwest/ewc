@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:show]
   before_action :current_user, only: [:edit, :update, :destroy]
   before_action :find_post, only: [:show, :edit, :update, :destroy]
 
@@ -32,6 +32,11 @@ class PostsController < ApplicationController
     end
   end
   def destroy
+    @post.destroy
+    respond_to do |format|
+      format.html { redirect_to :back, notice: 'Post was successfully deleted.' }
+      format.json { head :no_content }
+    end
   end
   def wall
     @posts = Post.where(category: "Wearable")
@@ -47,6 +52,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :description, :category, :image)
+    params.require(:post).permit(:title, :description, :category, :image, :link)
   end
 end

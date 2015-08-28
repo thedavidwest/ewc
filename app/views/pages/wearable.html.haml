@@ -2,8 +2,10 @@
   .overlay
     %h1 Wearable Ceramics
     %p Recent Additions
-    .col
-      - @posts.each do |post|
-        = image_tag post.image.url(:thumb)
-        %h2= post.title
-        %p= post.description
+    - @posts.each do |post|
+      .post-box
+        = link_to (image_tag post.image.url(:medium)), post
+        .post-content
+          %h2= post.title
+          %p= post.description
+          %h3= link_to "Buy Now", post.link, :target => "_blank"

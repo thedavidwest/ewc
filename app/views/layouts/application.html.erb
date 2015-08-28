@@ -17,6 +17,16 @@
   <%= render 'layouts/footer' %>
 <script>
 $(document).ready(function(){
+  $('.nav-toggle').bind('click',function(event){
+          $('nav ul').slideToggle();
+      });
+
+      $(window).resize(function(){
+          var w = $(window).width();
+          if(w > 768) {
+              $('nav ul').removeAttr('style');
+          }
+      });
   setTimeout(function(){
     $('.alert').fadeOut("slow", function(){
       $('.alert').remove();

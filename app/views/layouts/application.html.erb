@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Erinwestceramics</title>
+  <title>Erin West Ceramics</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link href='https://fonts.googleapis.com/css?family=Dancing+Script|Reenie+Beanie' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <% flash.each do |name, msg| %>
     <%= content_tag(:div, msg, class: "alert")%>
   <% end %>
-  <%= render 'layouts/header' %>
-  <%= yield %>
-  <%= render 'layouts/footer' %>
+  <input type="checkbox" id="sidebartoggler" name="" value="">
+  <div class="page-wrap">
+    <label for="sidebartoggler" class="toggle"><span></span></label>
+    <div class="page-content">
+      <%= yield %>
+    </div>
+    <div class="sidebar">
+      <div class="sidebar-logo"><%= link_to "EWC", root_path %></div>
+      <h3><a href="#wearable">Wearable</a></h3>
+      <ul>
+        <li><%= link_to "Circle Studs", circle_studs_path %></li>
+        <li><%= link_to "Geometric Studs", geometric_studs_path %></li>
+        <li><%= link_to "Triangle Studs", triangle_studs_path %></li>
+        <li><%= link_to "Bar Earrings", bar_earrings_path %></li>
+      </ul>
+      <h3><a href="#functional">Functional</a></h3>
+      <ul>
+        <li><%= link_to "Cylinders", wearable_path %></li>
+        <li><%= link_to "Bowls", functional_path %></li>
+        <li><%= link_to "Plates", functional_path %></li>
+        <li><%= link_to "Etc...", functional_path %></li>
+      </ul>
+      <h3><a href="https://www.etsy.com/shop/ErinWestCeramics">Etsy Shop</a></h3>
+      <h3><a href="mailto:erinwestceramics@gmail.com?Subject=Info%20Requested" target="_top">Email Me</a></h3>
+    </div>
+    <%= render 'layouts/footer' %>
+  </div>
 <script>
 $(document).ready(function(){
   $('.nav-toggle').bind('click',function(event){

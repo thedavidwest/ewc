@@ -1,6 +1,14 @@
 class PagesController < ApplicationController
   def home
   end
+  def circle_studs
+  end
+  def geometric_studs
+  end
+  def triangle_studs
+  end
+  def bar_earrings
+  end
   def wearable
     @posts = Post.where(category: "Wearable")
   end

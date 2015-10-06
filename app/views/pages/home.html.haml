@@ -1,13 +1,53 @@
+%header
+  %h1 Erin West Ceramics
+
 %section.main
-  .overlay
-    .main-content
-      .main-logo
-        = image_tag("https://s3.amazonaws.com/ewceramics/ewc-logo.svg")
-      %h1 Wearable and Functional Ceramics.
-      = link_to "Wearable", wearable_path, :class => "main-btn"
-      = link_to "Functional", functional_path, :class => "main-btn"
--#%section.about
-  -#.overlay
-    -#.about-content
-      -#%p There is something gratifying about using a material from the earth to create something solid. Working with clay centers and inspires me and makes me feel close to the earth. I see clay as part of life, so I combine form and function to make pieces that are eager to be used and appreciated. I have been fortunate enough to be able to spread my love for clay to hundreds of students for the past 8 years. Through the act of teaching, I have learned so much and believe one is never really finished being a student of their passion.
-      -#%h3 - Erin
+
+%section.btns
+  <a href="#wearable" class ="main-btn">Wearable</a>
+  <a href="#functional" class ="main-btn">Functional</a>
+
+%hr
+
+%section#wearable
+  %h1 Wearable
+  .col-1
+    %h3 Circle Studs
+    .group-img
+      = link_to "Circle Studs", circle_studs_path
+    .ind-imgs
+  .col-2
+    %h3 Faceted Studs
+    .group-img
+    .ind-imgs
+%section#wearable2
+  .col-1
+    %h3 Triangle Studs
+    .group-img
+    .ind-imgs
+  .col-2
+    %h3 Bar Earrings
+    .group-img
+    .ind-imgs
+
+%hr
+
+%section#functional
+  %h1 Functional
+  .col-1
+    %h3 Circle Studs
+    .group-img
+    .ind-imgs
+  .col-2
+    %h3 Faceted Studs
+    .group-img
+    .ind-imgs
+%section#functional2
+  .col-1
+    %h3 Triangle Studs
+    .group-img
+    .ind-imgs
+  .col-2
+    %h3 Bar Earrings
+    .group-img
+    .ind-imgs

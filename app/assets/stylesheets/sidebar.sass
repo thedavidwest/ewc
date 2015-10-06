@@ -1,0 +1,100 @@
+.page-content
+  position: relative
+  z-index: 0
+  +transition()
+
+.toggle
+  cursor: pointer
+  +position(fixed, 40px 0 0 25px)
+  +transition()
+  z-index: 1
+  +black-link
+  +size(40px)
+  +display(flex)
+  span,
+  span:before,
+  span:after
+    content: ""
+    display: block
+    height: 2px
+    width: 100%
+    background: #333
+    position: relative
+
+    transition: all 0.3s ease-in-out
+
+  span:before
+    top: 15px
+
+  span:after
+    top: -17px
+
+  &.is-open span
+    background: transparent
+
+  &.is-open span:before,
+  &.is-open span:after
+    transform-origin: center
+    transform: rotate(45deg)
+    top: 0
+
+  &.is-open span:before
+    transform: rotate(-45deg)
+.mobile-nav.is-open
+  display: block
+  transform: translateY(0%)
+  transition: .3s ease-in-out
+  z-index: 1
+
+.sidebar
+  +transition()
+  +position(fixed, 0px 0 0px -250px)
+  width: 250px
+  height: 100%
+  padding: 20px
+  z-index: 0
+  background: $black
+  ul
+    margin-left: 20px
+    margin-bottom: 20px
+    li
+      font:
+        size: 14px
+        weight: 300
+      text-transform: uppercase
+      padding: 10px 0
+      a
+        +white-link
+  h3
+    font:
+      size: 25px
+      weight: 100
+    color: $white
+    text-transform: uppercase
+    a
+      +white-link
+  .sidebar-logo
+    background:
+      image: url('ewc-logo.svg')
+      repeat: no-repeat
+      size: 150px
+      position: center
+    margin: 0 auto
+    +size(200px)
+    a
+      position: absolute
+      +size(150px)
+      top: 45px
+      left: 45px
+      color: transparent
+#sidebartoggler
+  display: none
+  &:checked + .page-wrap
+    .sidebar
+      left: 0px
+      //min-height: 100%
+      overflow: scroll
+    .toggle
+      left: 275px
+    .page-content
+      padding-left: 250px

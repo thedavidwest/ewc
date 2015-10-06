@@ -1,4 +1,6 @@
 // General
+header, section, hr
+  background: $white
 html
   height: 100%
   box-sizing: border-box
@@ -7,6 +9,10 @@ body
   position: relative
   min-height: 100%
   padding-bottom: 58px
+
+hr
+  +outer-container(90%)
+  border-bottom: 1px solid $black
 
 .alert
   width: 100%
@@ -30,203 +36,118 @@ input[type=text], input[type=email], textarea
 header
   background: $white
   width: 100%
-  position: fixed
-  border-bottom: 5px solid $black
-  z-index: 100
-  font-size: 20px
-  .navbar
-    padding: 20px 0
-    +outer-container(100%)
-    @media(max-width: 770px)
-      padding-bottom: 0
-
-    .nav-logo
-      +span-columns(3)
-      padding-left: 20px
-      font:
-        weight: 700
-      display: inline-block
-      color: $black
-      +turquoise-link2
-      @media(max-width: 770px)
-        +span-columns(12)
-        display: block
-        padding: 0 0 20px 10px
-        font-size: 20px
-        text-align: center
-      i
-        display: inline-block
-        @media(max-width: 770px)
-          display: none
-
-      h1
-        display: inline-block
-        margin-bottom: 0
-
-    nav
-      +span-columns(9)
-      text-align: right
-      @media(max-width: 770px)
-        +span-columns(12)
-        text-align: initial
-        ul
-          display: none
-      li
-        display: inline-block
-        padding: 0 20px
-        font:
-          weight: 700
-        @media(max-width: 770px)
-          display: block
-          text-align: center
-          padding: 10px
-          border-top: 1px solid $black
-          &:last-child
-            border-bottom: 1px solid $black
-          &:first-child
-            border-top: 5px solid $black
-        a
-          +turquoise-link
-
-    .nav-toggle
-      display: none
-      cursor: pointer
-      @media(max-width: 770px)
-        display: block
-        text-align: center
-
+  text-align: center
+  padding: 50px 0 0 0
+  h1
+    font:
+      weight: 100
+      size: 60px
+    text-transform: uppercase
+    padding: 0
+    margin: 0
 
 // Homepage - Main Section
 section.main
   +outer-container(100%)
   text-align: center
   margin: 0 auto
-  height: 100vh
+  height: 447px
   background:
-    image: url('https://s3.amazonaws.com/ewceramics/header-img.jpg')
+    image: url('main_section_img.png')
     size: cover
     position: center
-  border-bottom: 5px solid $black
-  .overlay
-    height: 100%
-    width: 100%
-    background:
-      color: transparentize($black, .7)
-    .main-content
-      +vertical-align
-      .main-logo
-        padding: 69px 0 20px 0
-        img
-          +size(150px)
-
-      h1
-        color: $white
-        font-size: 30px
-
-      .main-btn
-        +main-btn
-
-// Homepage - About Section
-section.about
-  width: 100%
-  background:
-    image: url('header-img.jpg')
-    size: cover
-    position: center
-  height: 800px
-  .overlay
-    height: 100%
-    width: 100%
-    background:
-      color: transparentize($black, .3)
-
-    .about-content
-      +vertical-align
-      +outer-container(75%)
-      font-family: 'Reenie Beanie', cursive
-      color: $white
-      font-size: 30px
-      @media(max-width: 770px)
-        font-size: 24px
-      p
-        padding: 40px 0 20px 0
-        margin-bottom: 0
-
-      h3
-        font:
-          family: 'Reenie Beanie', cursive
-          size: 44px
-          weight: 400
-        text-align: right
-        line-height: 1
-        padding: 0 50px 0 0
-        margin: 0
-
-// Wearable Page
-.wearable-wrapper
-  +outer-container(100%)
-  padding-top: 69px
+section.btns
   text-align: center
-  //background:
-    image: url('wearable.jpg')
-    size: cover
-    position: center center
-  //height: 92vh
+  color: $black
+  margin-bottom: 90px
+  .main-btn
+    +main-btn
 
-  .overlay
-    height: 100%
-    width: 100%
-    background:
-      color: transparentize($white, .2)
-    h1
-      padding-top: 40px
-      font:
-        size: 34px
-    .post-box
-      width: 300px
-      margin: 0 20px 40px 20px
-      display: inline-block
-      background: $black
-      color: $white
-      border-radius: 4px
-    .post-content
-      h3
-        a
-          +white-link
-
-// Functional Page
-.functional-wrapper
-  +outer-container(100%)
-  padding-top: 69px
+// Homepage - Wearable Section
+section#wearable, section#wearable2
+  +outer-container(90%)
   text-align: center
-  background:
-    image: url('header-img.jpg')
-    size: cover
-    position: bottom
-  //height: 92vh
-
-  .overlay
-    height: 100%
-    width: 100%
-    background:
-      color: transparentize($white, .1)
-    h1
-      padding-top: 40px
+  height: auto
+  margin-bottom: 90px
+  h1
+    font:
+      weight: 100
+      size: 50px
+    text-transform: uppercase
+    padding: 0
+    margin: 70px 0
+  .col-1, .col-2
+    +span-columns(6)
+    text-align: center
+    h3
       font:
-        size: 34px
+        size: 24px
+        weight: 100
+      text-transform: uppercase
+      margin: 0
+      line-height: 1
+      padding-bottom: 20px
+    .group-img
+      height: 200px
     .post-box
-      width: 300px
-      margin: 0 20px 40px 20px
-      display: inline-block
-      background: $black
-      color: $white
-      border-radius: 4px
-      img
-        border-radius: 4px 4px 0px 0px
+      +size(200px)
       .post-content
-        a
-          +white-link
 
+  .col-1
+    .group-img
+      background:
+        image: url('c-group.png')
+        position: center
+        repeat: no-repeat
+  .col-2
+    .group-img
+      background:
+        image: url('g-group.png')
+        position: center
+        repeat: no-repeat
+
+// Homepage - Functional Section
+section#functional, section#functional2
+  +outer-container(90%)
+  text-align: center
+  height: auto
+  margin-bottom: 90px
+  h1
+    font:
+      weight: 100
+      size: 50px
+    text-transform: uppercase
+    padding: 0
+    margin: 70px 0
+  .col-1, .col-2
+    +span-columns(6)
+    text-align: center
+    h3
+      font:
+        size: 24px
+        weight: 100
+      text-transform: uppercase
+      margin: 0
+      line-height: 1
+      padding-bottom: 20px
+    .group-img
+      height: 200px
+    .post-box
+      +size(200px)
+      .post-content
+
+  .col-1
+    .group-img
+      background:
+        image: url('c-group.png')
+        position: center
+        repeat: no-repeat
+  .col-2
+    .group-img
+      background:
+        image: url('g-group.png')
+        position: center
+        repeat: no-repeat
 
 // Stockists Page
 .stock-wrapper
@@ -301,17 +222,15 @@ section.about
 
 // Footer
 footer
-  background: $black
-  color: $white
-  //border-top: 5px solid $black
+  color: $black
   text-align: center
   padding: 20px 0
-  font-weight: 700
+  font-weight: 300
   width: 100%
   position: absolute
   bottom: 0
   right: 0
   left: 0
   p
-    margin: 0
+    margin: 0 auto
     font-size: 12px

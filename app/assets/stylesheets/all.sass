@@ -1,3 +1,13 @@
+//
+.coming-soon
+  +outer-container(75%)
+  padding-top: 150px
+  text-align: center
+  h1
+    font:
+      size: 24px
+      weight: 300
+
 // General
 header, section, hr
   background: $white
@@ -100,7 +110,7 @@ section#wearable, section#wearable2
         height: 100%
     .post-box
       +size(200px)
-
+section#wearable
   .col-1
     @media(max-width: 770px)
       margin-bottom: 50px
@@ -113,6 +123,21 @@ section#wearable, section#wearable2
     .group-img
       background:
         image: url('https://s3.amazonaws.com/ewceramics/g-group.png')
+        position: center
+        repeat: no-repeat
+section#wearable2
+  .col-1
+    @media(max-width: 770px)
+      margin-bottom: 50px
+    .group-img
+      background:
+        image: url('https://s3.amazonaws.com/ewceramics/t-group.png')
+        position: center
+        repeat: no-repeat
+  .col-2
+    .group-img
+      background:
+        image: url('https://s3.amazonaws.com/ewceramics/b-group.png')
         position: center
         repeat: no-repeat
 
@@ -148,20 +173,19 @@ section#functional, section#functional2
       height: 200px
     .post-box
       +size(200px)
-      .post-content
 
   .col-1
     @media(max-width: 770px)
       margin-bottom: 50px
     .group-img
       background:
-        image: url('https://s3.amazonaws.com/ewceramics/c-group.png')
+        image: url('https://s3.amazonaws.com/ewceramics/missing.jpg')
         position: center
         repeat: no-repeat
   .col-2
     .group-img
       background:
-        image: url('https://s3.amazonaws.com/ewceramics/g-group.png')
+        image: url('https://s3.amazonaws.com/ewceramics/missing.jpg')
         position: center
         repeat: no-repeat
 

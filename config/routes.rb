@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   get 'wearable' => 'pages#wearable'
+  get 'bowls' => 'pages#bowls'
+  get 'cylinders' => 'pages#cylinders'
+  get 'cups' => 'pages#cups'
+  get 'plates' => 'pages#plates'
   get 'circle-studs' => 'pages#circle-studs'
   get 'geometric-studs' => 'pages#geometric-studs'
   get 'triangle-studs' => 'pages#triangle-studs'

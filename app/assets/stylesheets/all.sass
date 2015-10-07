@@ -45,6 +45,9 @@ header
     text-transform: uppercase
     padding: 0
     margin: 0
+    @media(max-width: 660px)
+      font-size: 50px
+      margin-top: 20px
 
 // Homepage - Main Section
 section.main
@@ -53,7 +56,7 @@ section.main
   margin: 0 auto
   height: 447px
   background:
-    image: url('main_section_img.png')
+    image: url('https://s3.amazonaws.com/ewceramics/main_section_img.png')
     size: cover
     position: center
 section.btns
@@ -69,6 +72,8 @@ section#wearable, section#wearable2
   text-align: center
   height: auto
   margin-bottom: 90px
+  @media(max-width: 770px)
+    margin-bottom: 50px
   h1
     font:
       weight: 100
@@ -79,6 +84,8 @@ section#wearable, section#wearable2
   .col-1, .col-2
     +span-columns(6)
     text-align: center
+    @media(max-width: 770px)
+      +span-columns(12)
     h3
       font:
         size: 24px
@@ -89,20 +96,23 @@ section#wearable, section#wearable2
       padding-bottom: 20px
     .group-img
       height: 200px
+      a
+        height: 100%
     .post-box
       +size(200px)
-      .post-content
 
   .col-1
+    @media(max-width: 770px)
+      margin-bottom: 50px
     .group-img
       background:
-        image: url('c-group.png')
+        image: url('https://s3.amazonaws.com/ewceramics/c-group.png')
         position: center
         repeat: no-repeat
   .col-2
     .group-img
       background:
-        image: url('g-group.png')
+        image: url('https://s3.amazonaws.com/ewceramics/g-group.png')
         position: center
         repeat: no-repeat
 
@@ -112,6 +122,8 @@ section#functional, section#functional2
   text-align: center
   height: auto
   margin-bottom: 90px
+  @media(max-width: 770px)
+    margin-bottom: 50px
   h1
     font:
       weight: 100
@@ -122,6 +134,8 @@ section#functional, section#functional2
   .col-1, .col-2
     +span-columns(6)
     text-align: center
+    @media(max-width: 770px)
+      +span-columns(12)
     h3
       font:
         size: 24px
@@ -137,88 +151,19 @@ section#functional, section#functional2
       .post-content
 
   .col-1
+    @media(max-width: 770px)
+      margin-bottom: 50px
     .group-img
       background:
-        image: url('c-group.png')
+        image: url('https://s3.amazonaws.com/ewceramics/c-group.png')
         position: center
         repeat: no-repeat
   .col-2
     .group-img
       background:
-        image: url('g-group.png')
+        image: url('https://s3.amazonaws.com/ewceramics/g-group.png')
         position: center
         repeat: no-repeat
-
-// Stockists Page
-.stock-wrapper
-  +outer-container(100%)
-  padding-top: 69px
-  text-align: center
-  background:
-    image: url('header-img.jpg')
-    size: cover
-    position: bottom
-  height: 92vh
-
-  .overlay
-    height: 100%
-    width: 100%
-    background:
-      color: transparentize($white, .1)
-    h1
-      padding-top: 40px
-      font:
-        size: 34px
-    a
-      +turquoise-link2
-      font:
-        size: 28px
-        weight: 400
-        family: 'Reenie Beanie', cursive
-    img
-      +size(100px)
-      border-radius: 50px
-    .col
-      +span-columns(6)
-      @media(max-width: 770px)
-        +span-columns(12)
-
-// Contact Page
-.contact-wrapper
-  padding-top: 69px
-  text-align: center
-  h1
-    padding-top: 40px
-    font:
-      size: 30px
-      family: 'Reenie Beanie', cursive
-      weight: 400
-    color: $black
-  h2
-    font-size: 34px
-    //padding-bottom: 20px
-
-  p
-    padding: 40px 0 20px 0
-    font:
-      size: 24px
-      family: 'Reenie Beanie', cursive
-      weight: 400
-    a
-      +turquoise-link2
-
-  form
-    +outer-container(50%)
-    h1
-      padding: 0 0 10px 0
-      font-family: 'Dancing Script'
-      font-size: 16px
-      margin: 0
-      text-align: left
-    input[type=text]
-      min-height: 100px
-    .main-btn
-      +main-btn
 
 // Footer
 footer

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get 'cups' => 'pages#cups'
   get 'plates' => 'pages#plates'
   get 'circle-studs' => 'pages#circle-studs'
-  get 'geometric-studs' => 'pages#geometric-studs'
+  get 'faceted-studs' => 'pages#faceted-studs'
   get 'triangle-studs' => 'pages#triangle-studs'
   get 'bar-earrings' => 'pages#bar-earrings'
   get 'functional' => 'pages#functional'

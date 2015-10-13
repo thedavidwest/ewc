@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+  mount Shoppe::Engine => "/shoppe"
   get 'users/sign_up' => redirect('/404.html')
   devise_for :users
   resources :posts
   root 'pages#home'
+
+  get "product/:permalink", to: "products#show", as: "product"
+  post "product/:permalink", to: "products#buy", as: "buy"
 
   get 'wearable' => 'pages#wearable'
   get 'bowls' => 'pages#bowls'

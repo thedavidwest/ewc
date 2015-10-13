@@ -21,6 +21,8 @@ gem 'font-awesome-sass'
 gem 'simple_form', '~> 3.1.0'
 gem 'haml', '~> 4.0.7'
 gem 'unicorn'
+gem 'nifty-attachments'
+gem 'shoppe', '~> 1.1.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
